@@ -12,16 +12,11 @@ using namespace std;
 void Line::addStop(Stop stop){
     stops.push_back(stop);
   }
-  Stop Line::getCurrentStop(int s){
-    return stops[s];
-  }
-
-Line::Line() {
-	// TODO Auto-generated constructor stub
-
+Stop Line::getStop(int s){
+	return stops[s];
 }
 
-Line::~Line() {
-	// TODO Auto-generated destructor stub
-}
+
+
+
 

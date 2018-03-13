@@ -10,15 +10,13 @@
 
 #include <vector>
 #include "Stop.h"
-namespace std {
+using namespace std;
 
 class Line {
 	vector<Stop> stops;
 public:
 	void addStop(Stop stop);
-	Stop getCurrentStop(int s);
-	Line();
-	virtual ~Line();
+	Stop getStop(int s);
 };
 
 #endif /* LINE_H_ */
