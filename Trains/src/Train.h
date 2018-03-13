@@ -22,7 +22,7 @@ public:
 	Line line;
 	  int getCurrentStop();
 	  float getSpeed();
-	  float travelTime(float distance);
+	  int travelTime(int distance);
 	  void stop();
 	  void go();
 	  void makeStop();

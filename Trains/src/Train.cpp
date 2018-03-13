@@ -17,7 +17,7 @@ float Train::getSpeed(){
   return speed;
 }
 
-float Train::travelTime(float distance){
+int Train::travelTime(int distance){
   return distance / speed;
 }
 
@@ -26,15 +26,17 @@ void Train::stop(){
 }
 
 void Train::go(){
-  speed = 15;  //  m/s
+  speed = 30;  //  m/s
 }
 void Train::makeStop(){
 	cout<< "he llegado a la parada "<< line.getStop(currentStop).getName()<< endl;
 	stop();
 	this_thread::sleep_for (chrono::seconds(3));
+	currentStop++; //Tiene en cuenta siguiente parada
 	if (currentStop != line.getSizeOfStops()){
 		go();
-		currentStop++; //Tiene en cuenta siguiente parada
+		cout << "Saliendo de la parada: "<<line.getStop(currentStop-1).getName() << endl;
+
 	}
 }
 

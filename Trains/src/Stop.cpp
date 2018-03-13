@@ -25,3 +25,7 @@ int Stop::getDistanceToNext() const {
 const string& Stop::getName() const {
 	return name;
 }
+
+void Stop::setDistanceToNext(int distanceToNext) {
+	this->distanceToNext = distanceToNext;
+}

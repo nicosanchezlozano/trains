@@ -21,6 +21,7 @@ public:
 	virtual ~Stop();
 	int getDistanceToNext() const;
 	const string& getName() const;
+	void setDistanceToNext(int distanceToNext);
 };
 
 
