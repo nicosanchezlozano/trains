@@ -17,17 +17,21 @@ using namespace std;
 class Train {
 	int currentStop;
 	float speed;
+	int id;
+
 
 public:
 	Line line;
 	  int getCurrentStop();
 	  float getSpeed();
+	  int getId();
 	  int travelTime(int distance);
 	  void stop();
 	  void go();
 	  void makeStop();
+	  void moveTrain();
 
-	Train();
+	Train(int id);
 	virtual ~Train();
 };
 

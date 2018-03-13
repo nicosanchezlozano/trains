@@ -7,25 +7,35 @@
 
 #include "Train.h"
 #include <chrono>
-#include<thread>
+#include <thread>
+
+void startLine(Train train){
+	train.moveTrain();
+}
 
 int main(){
 
-	Train train1;
-	Stop stop1(500, "Atocha");
-	Stop stop2(400, "Delicias");
-	Stop stop3(350, "Méndez álvaro");
-	Stop stop4(0, "Pirámides");
+	Train train1(1);
+	Train train2(2);
+	Stop stop1(500, "A");
+	Stop stop2(400, "D");
+	Stop stop3(350, "M");
+	Stop stop4(0, "P");
 
 	train1.line.addStop(stop1);
 	train1.line.addStop(stop2);
 	train1.line.addStop(stop3);
 
-	while(train1.getCurrentStop() != (train1.line.getSizeOfStops())){
+	train2.line.addStop(stop2);
+	train2.line.addStop(stop1);
+	train2.line.addStop(stop3);
+	train2.line.addStop(stop4);
 
-		train1.makeStop();
-		if(train1.getCurrentStop() != train1.line.getSizeOfStops())
-			this_thread::sleep_for (chrono::seconds(train1.travelTime(train1.line.getStop(train1.getCurrentStop()).getDistanceToNext())));;
-	}
+
+	thread t1(startLine, ref(train1));
+	thread t2(startLine, ref(train2));
+	t1.join();
+	t2.join();
+
 }
 
