@@ -13,7 +13,7 @@ void Line::addStop(Stop stop){
     stops.push_back(stop);
   }
   Stop Line::getCurrentStop(int s){
-    return stop[s];
+    return stops[s];
   }
 
 Line::Line() {

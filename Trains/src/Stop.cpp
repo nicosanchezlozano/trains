@@ -9,10 +9,11 @@
 
 using namespace std;
 
-Stop::Stop( int distance, string name) distance(distance), name(name){}
-
-Stop::~Stop() {
-	// TODO Auto-generated destructor stub
+Stop::Stop( int distance, string name) {
+	distanceToNext = distance;
+	this->name = name;
 }
+
+Stop::~Stop() {}
 
 

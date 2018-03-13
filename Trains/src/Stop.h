@@ -12,11 +12,11 @@ using namespace std;
 
 class Stop {
 	string name;
-	  int distanceToNext;
+	 int distanceToNext;
 public:
 	  string getName();
 	  int getDistance();
-	Stop();
+	Stop(int distance, string name);
 	virtual ~Stop();
 };
 
