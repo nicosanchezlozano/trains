@@ -9,6 +9,7 @@
 #define TRAIN_H_
 
 #include "Line.h"
+#include <chrono>
 
 using namespace std;
 
@@ -21,6 +22,8 @@ public:
 	  float travelTime(float distance);
 	  void stop();
 	  void go();
+	  void makeStop();
+
 	Train();
 	virtual ~Train();
 };

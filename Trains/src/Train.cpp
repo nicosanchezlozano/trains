@@ -24,6 +24,13 @@ void Train::stop(){
 void Train::go(){
   speed = 15;  //  m/s
 }
+void Train::makeStop(){
+	stop();
+	this_thread::sleep_for (chrono::seconds(20));
+	go();
+	currentStop++; //Tiene en cuenta siguiente parada
+}
+
 
 Train::Train() {
 	currentStop = 0;

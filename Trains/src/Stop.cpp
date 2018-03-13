@@ -6,10 +6,11 @@
  */
 
 #include "Stop.h"
+#include <iostream>
 
 using namespace std;
 
-Stop::Stop( int distance, string name) {
+Stop::Stop( int distance, std::string name) {
 	distanceToNext = distance;
 	this->name = name;
 }
