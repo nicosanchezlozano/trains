@@ -16,10 +16,11 @@ class Stop {
 	string name;
 	 int distanceToNext;
 public:
-	  string getName();
-	  int getDistance();
+	
 	Stop(int distance, string name);
 	virtual ~Stop();
+	int getDistanceToNext() const;
+	const string& getName() const;
 };
 
 

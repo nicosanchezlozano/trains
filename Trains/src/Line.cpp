@@ -9,6 +9,9 @@
 
 using namespace std;
 
+int Line::getSizeOfStops(){
+	return stops.size();
+}
 void Line::addStop(Stop stop){
     stops.push_back(stop);
   }

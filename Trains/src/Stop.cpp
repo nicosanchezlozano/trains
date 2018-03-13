@@ -15,6 +15,13 @@ Stop::Stop( int distance, std::string name) {
 	this->name = name;
 }
 
-Stop::~Stop() {}
+Stop::~Stop() {
+}
 
+int Stop::getDistanceToNext() const {
+	return distanceToNext;
+}
 
+const string& Stop::getName() const {
+	return name;
+}

@@ -17,6 +17,7 @@ class Line {
 public:
 	void addStop(Stop stop);
 	Stop getStop(int s);
+	int getSizeOfStops();
 };
 
 #endif /* LINE_H_ */

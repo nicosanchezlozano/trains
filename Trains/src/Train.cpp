@@ -9,6 +9,10 @@
 
 using namespace std;
 
+int Train::getCurrentStop(){
+	return currentStop;
+}
+
 float Train::getSpeed(){
   return speed;
 }
@@ -25,10 +29,13 @@ void Train::go(){
   speed = 15;  //  m/s
 }
 void Train::makeStop(){
+	cout<< "he llegado a la parada "<< line.getStop(currentStop).getName()<< endl;
 	stop();
-	this_thread::sleep_for (chrono::seconds(20));
-	go();
-	currentStop++; //Tiene en cuenta siguiente parada
+	this_thread::sleep_for (chrono::seconds(3));
+	if (currentStop != line.getSizeOfStops()){
+		go();
+		currentStop++; //Tiene en cuenta siguiente parada
+	}
 }
 
 

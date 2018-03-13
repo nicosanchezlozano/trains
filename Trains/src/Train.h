@@ -10,14 +10,17 @@
 
 #include "Line.h"
 #include <chrono>
+#include <thread>
 
 using namespace std;
 
 class Train {
 	int currentStop;
 	float speed;
-	Line line;
+
 public:
+	Line line;
+	  int getCurrentStop();
 	  float getSpeed();
 	  float travelTime(float distance);
 	  void stop();
