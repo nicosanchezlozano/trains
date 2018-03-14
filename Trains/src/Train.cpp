@@ -37,7 +37,7 @@ void Train::makeStop(){
 		currentStop++; //Tiene en cuenta siguiente parada
 		if (currentStop != line.getSizeOfStops()){
 			go();
-			cout << "Saliendo de la parada: "<<line.getStop(currentStop-1).getName() << endl;
+			//cout << "Saliendo de la parada: "<<line.getStop(currentStop-1).getName() << endl;
 		}
 	}else if(id == 2){
 		cout<< "   " <<line.getStop(currentStop).getName()<< endl;
@@ -46,7 +46,7 @@ void Train::makeStop(){
 		currentStop++; //Tiene en cuenta siguiente parada
 		if (currentStop != line.getSizeOfStops()){
 			go();
-			cout << "Saliendo de la parada: "<<line.getStop(currentStop-1).getName() << endl;
+			//cout << "Saliendo de la parada: "<<line.getStop(currentStop-1).getName() << endl;
 		}
 
 	}
@@ -65,7 +65,7 @@ void Train::moveTrain(){
 			} else if (id == 2){
 				for(int i = 0; i < timeOfTravel; i = i + 3){
 					this_thread::sleep_for (chrono::seconds(3));
-					cout<<"   "<<"·"<<endl;
+					cout<<"   "<< "·" <<endl;
 				}
 			}
 		}
