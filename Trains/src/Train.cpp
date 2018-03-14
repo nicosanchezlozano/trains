@@ -56,7 +56,7 @@ void Train::moveTrain(){
 	while(currentStop != line.getSizeOfStops()){
 		makeStop();
 		if(currentStop != line.getSizeOfStops()){
-			int timeOfTravel = travelTime(line.getStop(currentStop).getDistanceToNext());
+			int timeOfTravel = travelTime(line.getStop(currentStop-1).getDistanceToNext());
 			if(id == 1){
 				for(int i = 0; i < timeOfTravel; i = i + 3){
 					this_thread::sleep_for (chrono::seconds(3));

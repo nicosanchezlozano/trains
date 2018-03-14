@@ -20,20 +20,20 @@ int main(){
 	Stop stop1(500, "A");
 	Stop stop2(400, "D");
 	Stop stop3(350, "M");
-	Stop stop4(0, "P");
+	Stop stop4(500, "P");
 
-	train1.line.addStop(stop1);
-	train1.line.addStop(stop2);
 	train1.line.addStop(stop3);
+	train1.line.addStop(stop2);
+	train1.line.addStop(stop1);
 
-	train2.line.addStop(stop2);
 	train2.line.addStop(stop1);
+	train2.line.addStop(stop2);
 	train2.line.addStop(stop3);
 	train2.line.addStop(stop4);
 
 
-	thread t1(startLine, ref(train1));
-	thread t2(startLine, ref(train2));
+	thread t1(startLine, train1);
+	thread t2(startLine, train2);
 	t1.join();
 	t2.join();
 

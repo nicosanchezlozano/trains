@@ -13,6 +13,7 @@
 using namespace std;
 
 class Stop {
+
 	string name;
 	 int distanceToNext;
 public:

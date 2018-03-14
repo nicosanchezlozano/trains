@@ -10,10 +10,14 @@
 
 using namespace std;
 
+
+
 Stop::Stop( int distance, std::string name) {
 	distanceToNext = distance;
 	this->name = name;
+
 }
+
 
 Stop::~Stop() {
 }
