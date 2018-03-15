@@ -12,10 +12,10 @@ using namespace std;
 int Line::getSizeOfStops(){
 	return stops.size();
 }
-void Line::addStop(Stop stop){
+void Line::addStop(Stop* stop){
     stops.push_back(stop);
   }
-Stop Line::getStop(int s){
+Stop* Line::getStop(int s){
 	return stops[s];
 }
 

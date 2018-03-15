@@ -12,12 +12,13 @@ using namespace std;
 
 
 
-Stop::Stop( int distance, std::string name) {
+Stop::Stop( int distance, std::string name/*, int platforms*/) {
 	distanceToNext = distance;
 	this->name = name;
-
+//	for(int i = 0; i < platforms; i++){
+//		s.notify();
+//	}
 }
-
 
 Stop::~Stop() {
 }

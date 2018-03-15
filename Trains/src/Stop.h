@@ -9,16 +9,20 @@
 #define STOP_H_
 
 #include <iostream>
+#include <mutex>
+
 
 using namespace std;
+
 
 class Stop {
 
 	string name;
 	 int distanceToNext;
+	// Semaphore s;
 public:
-	
-	Stop(int distance, string name);
+	mutex stopLock;
+	Stop(int distance, string name/*, int platforms*/);
 	virtual ~Stop();
 	int getDistanceToNext() const;
 	const string& getName() const;

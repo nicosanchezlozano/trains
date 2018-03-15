@@ -11,17 +11,18 @@
 #include "Line.h"
 #include <chrono>
 #include <thread>
+#include <mutex>
 
 using namespace std;
 
 class Train {
 	int currentStop;
 	float speed;
-	int id;
+	string name;
 
 
 public:
-	Line line;
+	Line* line = new Line;
 	  int getCurrentStop();
 	  float getSpeed();
 	  int getId();
@@ -31,7 +32,7 @@ public:
 	  void makeStop();
 	  void moveTrain();
 
-	Train(int id);
+	Train(string name);
 	virtual ~Train();
 };
 

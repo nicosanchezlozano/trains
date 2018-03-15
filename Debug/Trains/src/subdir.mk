@@ -7,19 +7,28 @@ CPP_SRCS += \
 ../Trains/src/Line.cpp \
 ../Trains/src/Stop.cpp \
 ../Trains/src/Train.cpp \
-../Trains/src/main.cpp 
+../Trains/src/main.cpp \
+../Trains/src/semaphore.cpp 
+
+O_SRCS += \
+../Trains/src/Line.o \
+../Trains/src/Stop.o \
+../Trains/src/Train.o \
+../Trains/src/main.o 
 
 OBJS += \
 ./Trains/src/Line.o \
 ./Trains/src/Stop.o \
 ./Trains/src/Train.o \
-./Trains/src/main.o 
+./Trains/src/main.o \
+./Trains/src/semaphore.o 
 
 CPP_DEPS += \
 ./Trains/src/Line.d \
 ./Trains/src/Stop.d \
 ./Trains/src/Train.d \
-./Trains/src/main.d 
+./Trains/src/main.d \
+./Trains/src/semaphore.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

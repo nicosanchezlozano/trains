@@ -13,10 +13,10 @@
 using namespace std;
 
 class Line {
-	vector<Stop> stops;
+	vector<Stop*> stops;
 public:
-	void addStop(Stop stop);
-	Stop getStop(int s);
+	void addStop(Stop* stop);
+	Stop* getStop(int s);
 	int getSizeOfStops();
 
 };
