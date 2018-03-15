@@ -10,19 +10,18 @@
 
 #include <iostream>
 #include <mutex>
+#include "semaphore.cpp"
 
 
 using namespace std;
 
 
 class Stop {
-
 	string name;
-	 int distanceToNext;
-	// Semaphore s;
+	int distanceToNext;
 public:
-	mutex stopLock;
-	Stop(int distance, string name/*, int platforms*/);
+	Semaphore s;
+	Stop(int distance, string name, int platforms = 1);
 	virtual ~Stop();
 	int getDistanceToNext() const;
 	const string& getName() const;

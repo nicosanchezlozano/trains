@@ -10,12 +10,6 @@ CPP_SRCS += \
 ../Trains/src/main.cpp \
 ../Trains/src/semaphore.cpp 
 
-O_SRCS += \
-../Trains/src/Line.o \
-../Trains/src/Stop.o \
-../Trains/src/Train.o \
-../Trains/src/main.o 
-
 OBJS += \
 ./Trains/src/Line.o \
 ./Trains/src/Stop.o \

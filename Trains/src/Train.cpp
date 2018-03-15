@@ -30,16 +30,16 @@ void Train::go(){
 	speed = 30;  //  m/s
 }
 void Train::makeStop(){
-	cout << name << ": esperando..\n";
-		lock_guard<mutex> guard(line->getStop(currentStop)->stopLock);
-		cout<< name +": " << line->getStop(currentStop)->getName() << endl;
+		cout << name + ": esperando..\n";
+		line->getStop(currentStop)->s.wait();
+		cout<< name +": " + line->getStop(currentStop)->getName() << endl;
 		stop();
 		this_thread::sleep_for (chrono::seconds(4));
+		line->getStop(currentStop)->s.notify();
 		currentStop++;
 		if (currentStop != line->getSizeOfStops()){
 			go();
-			//line.stops[currentStop].s.notify();
-			//cout << "Saliendo de la parada: "<<line.getStop(currentStop-1).getName() << endl;
+			cout << name + " sale de: "+ line->getStop(currentStop-1)->getName() << endl;
 	}
 }
 

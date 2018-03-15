@@ -23,17 +23,18 @@ int main(){
 	Train* train1 = new Train("Train1");
 	Train* train2 = new Train("                   Train2");
 	Train* train3 = new Train("                                          Train3");
-	Stop* stop1 = new Stop(300, "A"/*, 1*/);
-	Stop* stop2 = new Stop(210, "D"/*, 2*/);
-	Stop* stop3 = new Stop(150, "M"/*, 1*/);
-	Stop* stop4 = new Stop(300, "P"/*, 1*/);
-	Stop* stop5 = new Stop(180, "S"/*, 1*/);
-	Stop* stop6 = new Stop(240, "T"/*, 1*/);
-	Stop* stop7 = new Stop(300, "N"/*, 1*/);
-	Stop* stop8 = new Stop(90, "C"/*, 1*/);
+	Stop* stop1 = new Stop(300, "A");
+	Stop* stop2 = new Stop(210, "D", 2);
+	Stop* stop3 = new Stop(150, "M");
+	Stop* stop4 = new Stop(300, "P");
+	Stop* stop5 = new Stop(180, "S");
+	Stop* stop6 = new Stop(240, "T");
+	Stop* stop7 = new Stop(270, "N");
+	Stop* stop8 = new Stop(180, "C");
 
 	train1->line->addStop(stop1);
 	train1->line->addStop(stop2);
+	train1->line->addStop(stop8);
 	train1->line->addStop(stop3);
 
 	train2->line->addStop(stop4);
